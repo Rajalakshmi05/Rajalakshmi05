@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "33ee54f9-6d51-4ed0-9d5f-1359b32ded48",
+		"name": "week2Assignment-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateIssue",
+			"_postman_id": "d30a4fa4-1102-47d4-b408-37e0baeb7253",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n    \"project\":\r\n                {\r\n                    \"key\": \"LEAF\"\r\n                },\r\n    \"summary\": \"create issue in RA project\",\r\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\r\n    \"issuetype\": {\r\n                    \"name\": \"Story\"\r\n                }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateIssue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "189450d4-aee5-44ab-bd67-155dfeb0bfe2",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "3ead040c-b2a4-4175-9538-6afb6f9c4ff3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n\r\n        \"description\": \"Bug creation Using REST API for testing\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/11186"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteIssue",
+			"_postman_id": "d85deba0-c673-46b8-8914-6ab02b695a98",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/11186"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "India@123",
+			"username": "hari.radhakrishnan@testleaf.com"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "9bafe1ae-b645-4d69-9188-24086a3c11cf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "57345748-659a-4c87-bd5b-e19df596aede",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
