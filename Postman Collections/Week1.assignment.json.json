@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "c9e8f1d7-0a95-440b-867a-1114ebae86c4",
+		"name": "Week1.Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllissues",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7eb67fba-15fc-4c77-b6b1-a3f3d3bfbec4",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "1bcc9e2c-596f-4841-9ae6-e51d1259563a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "hari.radhakrishnan@testleaf.com",
+						"password": "i8YZKzalf1WBl1WsnUvvDC49"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n    \"project\":\r\n                {\r\n                    \"key\": \"LEAF\"\r\n                },\r\n    \"summary\": \"create issue in RA project\",\r\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\r\n    \"issuetype\": {\r\n                    \"name\": \"Story\"\r\n                }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api-training.atlassian.net/rest/api/2/issue/"
+			},
+			"response": []
+		},
+		{
+			"name": "AllIssues24hours",
+			"_postman_id": "859575c4-935d-4127-b0ab-df28355fe0ac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "hari.radhakrishnan@testleaf.com",
+						"password": "i8YZKzalf1WBl1WsnUvvDC49"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-training.atlassian.net/rest/api/2/search?jql=project=LeafTaps%26created>-24h",
+					"protocol": "https",
+					"host": [
+						"api-training",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=LeafTaps%26created>-24h"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "India@123",
+			"username": "hari.radhakrishnan@testleaf.com"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6e7e6608-4e14-4166-b9bf-0bc13c3b469e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "e7def9ea-6600-4a93-ad51-a2d187bd2c7b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
