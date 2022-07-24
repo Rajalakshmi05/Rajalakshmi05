@@ -19,7 +19,7 @@
 					}
 				}
 			],
-			"_postman_id": "1bcc9e2c-596f-4841-9ae6-e51d1259563a",
+			"id": "1bcc9e2c-596f-4841-9ae6-e51d1259563a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -27,8 +27,8 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"username": "hari.radhakrishnan@testleaf.com",
-						"password": "i8YZKzalf1WBl1WsnUvvDC49"
+						"password": "IiSywwQJik64k7VLIN3FF830",
+						"username": "hari.radhakrishnan@testleaf.com"
 					}
 				},
 				"method": "POST",
@@ -48,7 +48,7 @@
 		},
 		{
 			"name": "AllIssues24hours",
-			"_postman_id": "859575c4-935d-4127-b0ab-df28355fe0ac",
+			"id": "859575c4-935d-4127-b0ab-df28355fe0ac",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
